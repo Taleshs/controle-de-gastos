@@ -1,4 +1,3 @@
-import React from "react";
 import ResumeItem from "../ResumoItem";
 import * as C from "./styles";
 import {
