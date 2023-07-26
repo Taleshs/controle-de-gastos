@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import GlobalStyle from "./styles/global";
 import Header from "./components/Header";
 import Resume from "./components/Resumo";
@@ -26,9 +26,11 @@ const App = () => {
     const income = amountIncome.reduce((acc, cur) => acc + cur, 0).toFixed(2);
 
     const total = Math.abs(income - expense).toFixed(2);
-
+    // @ts-ignore
     setIncome(`R$ ${income}`);
+    // @ts-ignore
     setExpense(`R$ ${expense}`);
+    // @ts-ignore
     setTotal(`${Number(income) < Number(expense) ? "-" : ""}R$ ${total}`);
   }, [transactionsList]);
 
