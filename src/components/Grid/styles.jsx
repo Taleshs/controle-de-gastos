@@ -1,13 +1,16 @@
 import styled from "styled-components";
 
 export const Table = styled.table`
-  width: 98%;
+  width: 100%;
   background-color: #fff;
   padding: 20px;
   box-shadow: 0px 0px 5px #ccc;
   border-radius: 5px;
-  max-width: 1120px;
+  max-width: 1000px;
   margin: 20px auto;
+  @media (max-width: 750px) {
+    width:90%;
+  }
 `;
 
 export const Thead = styled.thead``;

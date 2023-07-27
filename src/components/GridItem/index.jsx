@@ -1,4 +1,5 @@
 import * as C from "./styles";
+import formatMoney from '../../utils'
 import {
   FaRegArrowAltCircleUp,
   FaRegArrowAltCircleDown,
@@ -9,7 +10,7 @@ const GridItem = ({ item, onDelete }) => {
   return (
     <C.Tr>
       <C.Td>{item.desc}</C.Td>
-      <C.Td>{item.amount}</C.Td>
+      <C.Td>{formatMoney(item.amount)}</C.Td>
       <C.Td alignCenter>
         {item.expense ? (
           <FaRegArrowAltCircleDown color="red" />
@@ -18,7 +19,7 @@ const GridItem = ({ item, onDelete }) => {
         )}
       </C.Td>
       <C.Td alignCenter>
-        <FaTrash onClick={() => onDelete(item.id)} />
+        <C.Button onClick={() => onDelete(item.id)}><FaTrash/></C.Button>
       </C.Td>
     </C.Tr>
   );

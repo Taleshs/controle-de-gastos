@@ -8,9 +8,17 @@ export const Container = styled.div`
   border-radius: 5px;
   padding: 5px 15px;
   width: 30%;
+  border: 2px solid #2e294e;
+  color: #8d99ae;
+  ${props => props.bg_color === 'income' && `
+    color: #1B998B;
+  `}
+  ${props => props.bg_color === 'outcome' && `
+    color: #D7263D;
+  `}
 
   @media (max-width: 750px) {
-    width: 20%;
+    width: 100%;
 
     p {
       font-size: 12px;
@@ -45,6 +53,6 @@ export const HeaderTitle = styled.p`
 `;
 
 export const Total = styled.span`
-  font-size: 30px;
+  font-size: 24px;
   font-weight: bold;
 `;
